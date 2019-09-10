@@ -463,6 +463,8 @@ Plugin 'django_templates.vim'
 Plugin 'Django-Projects'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 "Plugin 'FredKSchott/CoVim'
 "Plugin 'djangojump'
@@ -475,7 +477,9 @@ filetype plugin indent on     " required!
 "
 
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-
+"set laststatus=2  "永远显示状态栏
+"let g:airline_powerline_fonts = 1  " 支持 powerline 字体
+"let g:airline#extensions#tabline#enabled = 1 "显示窗口tab和buffer
 
 
 "ctrlp设置

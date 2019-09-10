@@ -50,6 +50,14 @@
 - 打开vim并执行bundle程序`:BundleInstall`
 - 重新打开vim即可看到效果
 
+### YouCompleteMe 的安装配置
+[ubuntu下vim 安装插件管理工具Vundle和自动补全插件YouCompleteMe](https://blog.csdn.net/m0_37624499/article/details/89526701)
+在 ~/.vimrc 文件中加入如下命令实现 F7 跳转到函数定义处：
+`nnoremap <F7> :YcmCompleter GoToDefinitionElseDeclaration<CR> `
+
+### vim-airline 的安装配置
+[安装配置 Vim-airline](https://www.jianshu.com/p/f4ff48c196af)
+
 ### 了解更多vim使用的小技巧：
 
 [tips.md](tips.md)
