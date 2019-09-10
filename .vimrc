@@ -37,7 +37,10 @@ set cuc
 set shortmess=atI   " 启动的时候不显示那个援助乌干达儿童的提示  
 set go=             " 不要图形按钮  
 "color desert     " 设置背景主题  
-color ron     " 设置背景主题  
+"color ron     " 设置背景主题  
+
+set background=dark
+colorscheme PaperColor
 "color torte     " 设置背景主题  
 "set guifont=Courier_New:h10:cANSI   " 设置字体  
 "autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
@@ -402,6 +405,10 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
+let g:ycm_server_python_interpreter = '/usr/bin/python'
+let g:ycm_global_ycm_extra_conf ='~/.vim/.ycm_extra_conf.py'
+
+nnoremap <F7> :YcmCompleter GoToDefinitionElseDeclaration<CR> 
 
 set iskeyword+=.
 set termencoding=utf-8
@@ -418,45 +425,47 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-" My Bundles here:
+" My Plugins here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'Yggdroot/indentLine'
+Plugin 'tpope/vim-fugitive'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'Yggdroot/indentLine'
 let g:indentLine_char = '┊'
 "ndle 'tpope/vim-rails.git'
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
 " non github repos
-Bundle 'https://github.com/wincent/command-t.git'
-Bundle 'Auto-Pairs'
-Bundle 'python-imports.vim'
-Bundle 'CaptureClipboard'
-Bundle 'ctrlp-modified.vim'
-Bundle 'last_edit_marker.vim'
-Bundle 'synmark.vim'
-"Bundle 'Python-mode-klen'
-Bundle 'SQLComplete.vim'
-Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
-"Bundle 'JavaScript-Indent'
-"Bundle 'Better-Javascript-Indentation'
-Bundle 'jslint.vim'
-Bundle "pangloss/vim-javascript"
-Bundle 'Vim-Script-Updater'
-Bundle 'ctrlp.vim'
-Bundle 'tacahiroy/ctrlp-funky'
-Bundle 'jsbeautify'
-Bundle 'The-NERD-Commenter'
+Plugin 'https://github.com/wincent/command-t.git'
+Plugin 'Auto-Pairs'
+Plugin 'python-imports.vim'
+Plugin 'CaptureClipboard'
+Plugin 'ctrlp-modified.vim'
+Plugin 'last_edit_marker.vim'
+Plugin 'synmark.vim'
+"Plugin 'Python-mode-klen'
+Plugin 'SQLComplete.vim'
+Plugin 'Javascript-OmniCompletion-with-YUI-and-j'
+"Plugin 'JavaScript-Indent'
+"Plugin 'Better-Javascript-Indentation'
+Plugin 'jslint.vim'
+"Plugin "pangloss/vim-javascript"
+Plugin 'Vim-Script-Updater'
+Plugin 'ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'jsbeautify'
+Plugin 'The-NERD-Commenter'
 "django
-Bundle 'django_templates.vim'
-Bundle 'Django-Projects'
+Plugin 'django_templates.vim'
+Plugin 'Django-Projects'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'NLKNguyen/papercolor-theme'
 
-"Bundle 'FredKSchott/CoVim'
-"Bundle 'djangojump'
+"Plugin 'FredKSchott/CoVim'
+"Plugin 'djangojump'
 " ...
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
@@ -464,6 +473,11 @@ let g:html_indent_style1 = "inc"
 
 filetype plugin indent on     " required!
 "
+
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+
+
+
 "ctrlp设置
 "
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.png,*.jpg,*.gif     " MacOSX/Linux
