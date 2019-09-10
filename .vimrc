@@ -133,8 +133,8 @@ func SetTitle()
 	else 
 		call setline(1, "/*************************************************************************") 
 		call append(line("."), "	> File Name: ".expand("%")) 
-		call append(line(".")+1, "	> Author: ") 
-		call append(line(".")+2, "	> Mail: ") 
+		call append(line(".")+1, "	> Author: zewen")  
+		call append(line(".")+2, "	> Mail: zewen.zhu@telink.com") 
 		call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
 		call append(line(".")+4, " ************************************************************************/") 
 		call append(line(".")+5, "")
@@ -351,6 +351,10 @@ set scrolloff=3
 ""		return a:char
 ""	endif
 ""endfunction
+
+inoremap tt printk("zewen---> [FUNC]%s [LINE]:%d\n", __FUNCTION__, __LINE__);
+inoremap ff printf("zewen---> [FUNC]%s [LINE]:%d\n", __FUNCTION__, __LINE__);
+
 filetype plugin indent on 
 "打开文件类型检测, 加了这句才可以用智能补全
 set completeopt=longest,menu
