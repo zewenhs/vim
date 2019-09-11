@@ -47,11 +47,12 @@
 - `mv ~/vim ~/.vim`
 - `mv ~/.vim/.vimrc ~/`
 - clone bundle 程序：`git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
-- 打开vim并执行bundle程序`:BundleInstall`
+B
+- 打开vim并执行bundle程序`:PluginInstall`
 - 重新打开vim即可看到效果
 
 ### YouCompleteMe 的安装配置
-[ubuntu下vim 安装插件管理工具Vundle和自动补全插件YouCompleteMe](https://blog.csdn.net/m0_37624499/article/details/89526701)
+[ubuntu下vim 安装插件管理工具Vundle和自动补全插件YouCompleteMe](https://blog.csdn.net/m0_37624499/article/details/89526701)  
 在 ~/.vimrc 文件中加入如下命令实现 F7 跳转到函数定义处：
 `nnoremap <F7> :YcmCompleter GoToDefinitionElseDeclaration<CR> `
 
