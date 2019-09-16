@@ -46,7 +46,7 @@
 - clone配置文件：`cd ~/ && git clone git://github.com/ma6174/vim.git`
 - `mv ~/vim ~/.vim`
 - `mv ~/.vim/.vimrc ~/`
-B
+
 - clone bundle 程序：`git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`  
 - 打开vim并执行bundle程序`:PluginInstall`
 - 重新打开vim即可看到效果
@@ -74,6 +74,6 @@ B
 执行如下命令解决：  
 `sudo apt install vim-python-jedi`  
 
-2. 如果打开python文件时出现：
-`the pyflakes.vim plugin requires Vim to be compiled with +python`  
-可以按如下方法解决： [the pyflakes.vim plugin requires Vim to be compiled with +python](https://blog.csdn.net/chichoxian/article/details/99306143)
+2. 如果打开python文件时出现：  
+`the pyflakes.vim plugin requires Vim to be compiled with +python`   
+可以按如下方法解决： [[错误收录] the pyflakes.vim plugin requires Vim to be compiled with +python](https://blog.csdn.net/chichoxian/article/details/99306143)
