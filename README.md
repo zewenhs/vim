@@ -46,18 +46,19 @@
 - clone配置文件：`cd ~/ && git clone git://github.com/ma6174/vim.git`
 - `mv ~/vim ~/.vim`
 - `mv ~/.vim/.vimrc ~/`
-- clone bundle 程序：`git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 B
+- clone bundle 程序：`git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`  
 - 打开vim并执行bundle程序`:PluginInstall`
 - 重新打开vim即可看到效果
 
 ### YouCompleteMe 的安装配置
 [ubuntu下vim 安装插件管理工具Vundle和自动补全插件YouCompleteMe](https://blog.csdn.net/m0_37624499/article/details/89526701)  
-在 ~/.vimrc 文件中加入如下命令实现 F7 跳转到函数定义处：
+在 ~/.vimrc 文件中加入如下命令实现 F7 跳转到函数定义处：  
 `nnoremap <F7> :YcmCompleter GoToDefinitionElseDeclaration<CR> `
 
 ### vim-airline 的安装配置
 [安装配置 Vim-airline](https://www.jianshu.com/p/f4ff48c196af)
+
 
 ### 了解更多vim使用的小技巧：
 
@@ -66,3 +67,13 @@ B
 ### 查看更新日志：
 
 [`update_log.md`](update_log.md)
+
+### Issue
+1. 如果出现  
+`YouCompleteMe unavailable: requires Vim compiled with Python (2.7.1+ or 3.4+) support`  
+执行如下命令解决：  
+`sudo apt install vim-python-jedi`  
+
+2. 如果打开python文件时出现：
+`the pyflakes.vim plugin requires Vim to be compiled with +python`  
+可以按如下方法解决： [the pyflakes.vim plugin requires Vim to be compiled with +python](https://blog.csdn.net/chichoxian/article/details/99306143)
